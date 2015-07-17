@@ -1,0 +1,13 @@
+*.ncrunchproject
+*.ncrunchsolution
+*.cache
+*.suo
+*.user
+
+_Resharper.MarvellousMarkovModels
+
+MarvellousMarkovModels/bin
+MarvellousMarkovModels/obj
+
+MarvellousMarkovModels.Test/bin
+MarvellousMarkovModels.Test/obj
