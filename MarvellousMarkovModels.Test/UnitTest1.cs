@@ -125,14 +125,17 @@ namespace MarvellousMarkovModels.Test
             };
             starNames = starNames.Select(a => a.ToLowerInvariant()).ToList();
 
-            var builder = new ModelBuilder(4);
-            foreach (var starName in starNames)
-                builder.Teach(starName);
+            var builder = new ModelBuilder(3).Teach(starNames);
+
+            for (int i = 0; i < 20; i++)
+            {
+                Console.WriteLine("{0},{1}", i, builder._productions.Count(a => a.Value.Count == i));
+            }
 
             var model = builder.ToModel();
             Random r = new Random();
 
-            int count = 10;
+            int count = 100;
             while (count > 0)
             {
                 var n = model.Generate(r).Trim();

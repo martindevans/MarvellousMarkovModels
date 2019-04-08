@@ -7,8 +7,8 @@ namespace MarvellousMarkovModels
     {
         private readonly int _order;
 
-        private readonly Dictionary<string, int> _startingStrings = new Dictionary<string, int>();
-        private readonly Dictionary<string, Dictionary<string, int>> _productions = new Dictionary<string, Dictionary<string, int>>();
+        public readonly Dictionary<string, int> _startingStrings = new Dictionary<string, int>();
+        public readonly Dictionary<string, Dictionary<string, int>> _productions = new Dictionary<string, Dictionary<string, int>>();
 
         public ModelBuilder(int order)
         {
